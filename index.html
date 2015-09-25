@@ -1,1 +1,107 @@
-test
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="blackjack.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <title>Donghwa Lee's Blackjack Game</title>
+
+  </head>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <ul>
+        <li role="presentation" id="game-title">A&#9824; BLACKJACK &#9824;J</li>
+        <li role="presentation" id="separators">|</li>
+        <li role="presentation">$</li>
+        <li role="presentation" id="current-money">0</li>
+        <li role="presentation"><button type="button" class="btn btn-success" id="start-button">START / RELOAD</button></li>
+        <li role="presentation" id="separators">|</li>
+        <li role="presentation">$</li>
+        <li role="presentation" id="betting-money">5</li>
+        <li>
+          <button type="button" class="btn btn-info btn-xs" id="plus-button">+</button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-danger btn-xs" id="minus-button">-</button>
+        </li>
+        <li role="presentation">
+          <button type="button" class="btn btn-success" id="bet-button">BET</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-12 play-areas" id="title-area">
+          Dealer's Cards
+        </div>
+
+        <div class="col-md-12 play-areas" id="dealercard-area">
+        </div>
+
+        <!-- <div class="col-md-12 play-areas" id="rules-area">
+          BLACKJACK PAYS 3 TO 2 - INSURANCE PAYS 2 TO 1 - Dealer must draw 16 and stand on all 17's
+        </div> -->
+
+        <div class="col-md-12 play-areas" id="rules-area">
+          BLACKJACK PAYS 3 TO 2 - Dealer must draw 16 and stand on all 17's
+        </div>
+
+        <div class="col-md-12 play-areas" id="message-area">
+          Press the START button above
+        </div>
+
+        <div class="col-md-12 play-areas" id="playercard-area">
+        </div>
+
+        <div class="col-md-12 play-areas" id="title-area">
+          Your Cards
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+  <footer class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <ul>
+          <li role="presentation">
+            <button type="button" class="btn btn-success btn-lg" id="deal-button">DEAL</button>
+          </li>
+          <li role="presentation">
+            <button type="button" class="btn btn-success btn-lg" id="hit-button">HIT</button>
+          </li>
+          <li role="presentation">
+            <button type="button" class="btn btn-success btn-lg" id="stay-button">STAY</button>
+          </li>
+          <li role="presentation" id="separators">|</li>
+          <li role="presentation">
+            <button type="button" class="btn btn-success btn-sm" id="double-button" disabled="disabled">DOUBLE DOWN</button>
+          </li>
+          <!-- <li role="presentation" id="separators">|</li>
+          <li role="presentation">
+            <button type="button" class="btn btn-success btn-sm" id="ins-yes-button" disabled="disabled">INSURANCE YES</button>
+          </li>
+          <li role="presentation">
+            <button type="button" class="btn btn-success btn-sm" id="ins-no-button"  disabled="disabled">NO</button>
+          </li> -->
+        </ul>
+      </div>
+    </footer>
+
+  <script src="blackjack.js"></script>
+</html>
