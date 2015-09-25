@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #222;
+  font-family: 'Share Tech Mono';
+}
+
+
+/*navigation elements*/
+
+.navbar {
+  text-align: center;
+  height: 70px;
+  background-color: lightyellow;
+  font-size: 1.7em;
+  color: #555;
+  min-width: 750px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav ul {
+  margin-top: 20px;
+}
+
+#game-title {
+  font-weight: bolder;
+  color: #111;
+}
+
+#separators {
+  color: lightgray;
+  font-weight: lighter;
+}
+
+/*footer elements*/
+
+footer {
+  min-width: 750px;
+}
+
+footer li {
+  display: inline;
+  font-size: 1em;
+}
+
+footer ul {
+  margin-top: 10px;
+}
+
+
+/*status windows*/
+
+#betting-money {
+  background: #555;
+  padding: 4px;
+  color: white;
+}
+
+#current-money {
+  background: #555;
+  padding: 4px;
+  color: white;
+}
+
+/*Playing area*/
+
+div {
+  max-width: 800px;
+}
+
+.play-areas {
+  text-align: center;
+}
+
+#title-area {
+  background: lightblue;
+  font-size: 2em;
+}
+
+#dealercard-area {
+  background: lightyellow;
+  height: 150px;
+}
+
+#playercard-area {
+  background: lightyellow;
+  height: 150px;
+}
+
+#rules-area {
+  margin-top: 10px;
+  font-size: 1em;
+  font-style: italic;
+  color: gray;
+}
+
+#message-area {
+  background: darkgreen;
+  margin: 10px auto;
+  font-size: 1.5em;
+  color: lightyellow;
+}
+
+
+/*images*/
+
+img {
+  height: 90%;
+  margin: 1%;
+  border: solid gray 1px;
+  border-radius: 4px;
+}
+
+/*Card design*/
+
+.cards {
+  background: white;
+  margin: 7px;
+  height: 90%;
+  width: 100px;
+  display: inline-block;
+  border: solid gray 1px;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 28px;
+  font-size: 3.5em;
+}
+
+#red-font {
+  color: red;
+}
+
+/*stacking works, yay!*/
+
+.cards:nth-child(1n+2) {
+  margin-left: -30px;
+}
