@@ -4,36 +4,105 @@
   margin: 0;
 }
 
-body {
-  padding-top: 120px;
-  padding-bottom: 100px;
-  background: #222;
-  font-family: 'Share Tech Mono';
+@media screen and (min-width:800px) {
+  body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #222;
+    font-family: 'Share Tech Mono';
+  }
+
+  /*navigation elements*/
+
+  .navbar {
+    text-align: center;
+    /*height: 70px;*/
+    background-color: lightyellow;
+    font-size: 1.5em;
+    color: #555;
+  }
+
+  nav li {
+    display: inline;
+  }
+
+  nav ul {
+    margin-top: 20px;
+  }
+
+  ul div {
+    display: inline-block;
+    margin bottom: 15px;
+  }
+}
+
+@media screen and (max-width:799px) {
+  body {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    background: #222;
+    font-family: 'Share Tech Mono';
+  }
+
+  /*navigation elements*/
+
+  .navbar {
+    text-align: center;
+    /*height: 80px;*/
+    background-color: lightyellow;
+    font-size: 1.3em;
+    color: #555;
+  }
+
+  nav li {
+    display: inline;
+  }
+
+  nav ul {
+    margin-top: 10px;
+  }
+
+  ul div {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
 }
 
 
-/*navigation elements*/
+@media screen and (max-width:499px) {
+  body {
+    padding-top: 140px;
+    padding-bottom: 100px;
+    background: #222;
+    font-family: 'Share Tech Mono';
+  }
 
-.navbar {
-  text-align: center;
-  height: 100px;
-  background-color: lightyellow;
-  font-size: 1.5em;
-  color: #555;
-  min-width: 500px;
+  /*navigation elements*/
+
+  .navbar {
+    text-align: center;
+    /*height: 80px;*/
+    background-color: lightyellow;
+    font-size: 1.3em;
+    color: #555;
+  }
+
+  nav li {
+    display: inline;
+  }
+
+  nav ul {
+    margin-top: 10px;
+  }
+
+  ul div {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
 }
 
-nav li {
-  display: inline;
-}
 
-nav ul {
-  margin-top: 25px;
-}
 
-ul div {
-  display: inline-block;
-}
 
 #game-title {
   font-weight: bolder;
@@ -48,8 +117,6 @@ ul div {
 /*footer elements*/
 
 footer {
-  height: 70px;
-  min-width: 450px;
 }
 
 footer li {
@@ -59,6 +126,7 @@ footer li {
 
 footer ul {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .navbar-fixed-bottom {
@@ -150,5 +218,5 @@ img {
 /*stacking works, yay!*/
 
 .cards:nth-child(1n+2) {
-  margin-left: -30px;
+  margin-left: -20px;
 }
