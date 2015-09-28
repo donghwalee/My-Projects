@@ -207,8 +207,8 @@ img {
   border: solid gray 1px;
   border-radius: 4px;
   text-align: center;
-  padding-top: 28px;
-  font-size: 3.5em;
+  padding-top: 32px;
+  font-size: 3em;
 }
 
 #red-font {
@@ -218,5 +218,5 @@ img {
 /*stacking works, yay!*/
 
 .cards:nth-child(1n+2) {
-  margin-left: -20px;
+  margin-left: -25px;
 }
