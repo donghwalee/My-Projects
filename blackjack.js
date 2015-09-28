@@ -1,6 +1,6 @@
 // Blackjack
 
-// variables
+// variables - default deck of cards
 
 var cards = [
   {Suit: 'C', Card: "A", Points: 1 },
@@ -59,17 +59,26 @@ var cards = [
 
 
 
-// for testing... --> var cards = [ 1, 2, 3, 4, 5, 6, 7 ];
+// for initial testing... --> var cards = [ 1, 2, 3, 4, 5, 6, 7 ];
 
-// default money and bet amounts
+
+// default money and bet amounts, betTemp was created to deal with doubling down
 var money = 0;
 var bet = 5;
 var betTemp = 0;
 
 
-// (inefficiently) grabbing HTML elements
+// (inefficiently...) grabbing HTML elements
+
+// buttons - for use with click events
 
 var startButton = $('#start-button');
+
+var plusButton = $('#plus-button');
+var minusButton = $('#minus-button');
+var betButton = $('#bet-button');
+var betGroup = $('.bet-group');
+
 var hitButton = $('#hit-button');
 var stayButton = $('#stay-button');
 var controlGroup = $('.control-group');
@@ -77,10 +86,7 @@ var controlGroup = $('.control-group');
 var doubleButton = $('#double-button');
 var doubleGroup = $('.double-group');
 
-var plusButton = $('#plus-button');
-var minusButton = $('#minus-button');
-var betButton = $('#bet-button');
-var betGroup = $('.bet-group');
+// message and status areas
 
 var currentMoney = $('#current-money');
 var bettingMoney = $('#betting-money');
@@ -88,14 +94,29 @@ var bettingMoney = $('#betting-money');
 var dealerCardArea = $('#dealercard-area');
 var playerCardArea = $('#playercard-area');
 
+var gameMessages = $('#message-area');
 
-// function to update the main money view
+
+// Game message texts for the message area
+
+var noMoney = "Not enought $ to continue...";
+var minimumBet = "$5 is the minimum bet at this table.";
+var goodLuck = "Here are your cards.";
+var defaultMessage = "PLACE YOUR BETS & GOOD LUCK!"
+
+var push = "It's a push.";
+var winBlackjack = "BLACKJACK!! YOU WIN!!";
+var loseBlackjack = "Sorry, the dealer has a Blackjack, you lose.";
+
+
+// function to update the main money view - to 2 digits
 
 var moneyView = function () {
   currentMoney.text(money.toFixed(2));
 };
 
-// button states
+
+// button states - to enable and disable buttons depending on game status
 
 var buttonStateOne = function () {
   betGroup.removeAttr('disabled');
@@ -116,7 +137,7 @@ var buttonStateThree = function () {
 };
 
 
-// (yikes) and inefficiently listening for elements
+// (yikes...) and inefficiently listening for elements
 
 startButton.click(function () {
   console.log("start button");
@@ -169,18 +190,21 @@ hitButton.click(function () {
   Game.playerHas();
 });
 
-var hit = function () {
-  Game.dealPlayer();
-  Game.updatePlayerCardsView();
-  Game.playerHas();
-};
-
 stayButton.click(function () {
   buttonStateOne();
   console.log("stay");
   // player plays until some logic...
   Game.dealerGame();
 });
+
+
+// below 2 variables for the double down button
+
+var hit = function () {
+  Game.dealPlayer();
+  Game.updatePlayerCardsView();
+  Game.playerHas();
+};
 
 var stay = function () {
   Game.dealerGame();
@@ -200,8 +224,6 @@ doubleButton.click(function () {
   }
 });
 
-
-// need to create ones for Deal, Hit, and Stay
 
 
 
@@ -287,8 +309,6 @@ Game = {
   playerGame: function () {
 
   },
-
-  // double doubleDown
 
   // dealer plays until some logic
   dealerGame: function () {
@@ -607,6 +627,7 @@ Game = {
     }
     },
 
+  // not used
   updateMessageView: function (){
 
   },
@@ -627,7 +648,7 @@ Game = {
     buttonStateOne();
   },
 
-  // after a hand has finished, next hand - NOT NEEDED
+  // after a hand has finished, next hand - NOT USED
   nextGame: function () {
     console.log("somebody has tripped the nextGame function");
     moneyView();
@@ -639,18 +660,3 @@ Game = {
     playerCardArea.empty();
   }
 };
-
-
-
-// Game messages for the message area
-
-var gameMessages = $('#message-area');
-
-var noMoney = "Not enought $ to continue...";
-var minimumBet = "$5 is the minimum bet at this table.";
-var goodLuck = "Here are your cards.";
-var defaultMessage = "PLACE YOUR BETS & GOOD LUCK!"
-
-var push = "It's a push.";
-var winBlackjack = "BLACKJACK!! YOU WIN!!";
-var loseBlackjack = "Sorry, the dealer has a Blackjack, you lose.";
