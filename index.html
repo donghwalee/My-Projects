@@ -26,13 +26,13 @@
         <li role="presentation">$</li>
         <li role="presentation" id="betting-money">5</li>
         <li>
-          <button type="button" class="btn btn-info btn-xs" id="plus-button">+</button>
+          <button type="button" class="btn btn-info btn-xs bet-group" id="plus-button">+</button>
         </li>
         <li>
-          <button type="button" class="btn btn-danger btn-xs" id="minus-button">-</button>
+          <button type="button" class="btn btn-danger btn-xs bet-group" id="minus-button">-</button>
         </li>
         <li role="presentation">
-          <button type="button" class="btn btn-success" id="bet-button">BET</button>
+          <button type="button" class="btn btn-success bet-group" id="bet-button">BET / DEAL</button>
         </li>
       </ul>
     </div>
@@ -56,7 +56,7 @@
         </div> -->
 
         <div class="col-md-12 play-areas" id="rules-area">
-          BLACKJACK PAYS 3 TO 2 - Dealer must draw 16 and stand on all 17's
+          BLACKJACK PAYS 3 TO 2 - Dealer must draw to 16 and stand on all 17's
         </div>
 
         <div class="col-md-12 play-areas" id="message-area">
@@ -80,18 +80,18 @@
       <div class="container">
         <ul>
           <li role="presentation">
-            <button type="button" class="btn btn-success btn-lg" id="deal-button">DEAL</button>
+            <button type="button" class="btn btn-success btn-lg control-group" id="hit-button" disabled="disabled">HIT</button>
           </li>
           <li role="presentation">
-            <button type="button" class="btn btn-success btn-lg" id="hit-button">HIT</button>
-          </li>
-          <li role="presentation">
-            <button type="button" class="btn btn-success btn-lg" id="stay-button">STAY</button>
+            <button type="button" class="btn btn-success btn-lg control-group" id="stay-button" disabled="disabled">STAY</button>
           </li>
           <li role="presentation" id="separators">|</li>
           <li role="presentation">
-            <button type="button" class="btn btn-success btn-sm" id="double-button" disabled="disabled">DOUBLE DOWN</button>
+            <button type="button" class="btn btn-success btn-sm double-group" id="double-button" disabled="disabled">DOUBLE DOWN</button>
           </li>
+          <!-- <li role="presentation">
+            <button type="button" class="btn btn-success btn-sm" id="double-button" disabled="disabled">DOUBLE DOWN</button>
+          </li> -->
           <!-- <li role="presentation" id="separators">|</li>
           <li role="presentation">
             <button type="button" class="btn btn-success btn-sm" id="ins-yes-button" disabled="disabled">INSURANCE YES</button>
