@@ -18,9 +18,9 @@ body {
   text-align: center;
   height: 70px;
   background-color: lightyellow;
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: #555;
-  min-width: 750px;
+  min-width: 800px;
 }
 
 nav li {
@@ -44,7 +44,7 @@ nav ul {
 /*footer elements*/
 
 footer {
-  min-width: 750px;
+  min-width: 800px;
 }
 
 footer li {
@@ -74,7 +74,7 @@ footer ul {
 /*Playing area*/
 
 div {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .play-areas {
