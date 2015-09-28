@@ -17,22 +17,31 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <ul>
-        <li role="presentation" id="game-title">A&#9824; BLACKJACK &#9824;J</li>
-        <li role="presentation" id="separators">|</li>
-        <li role="presentation">$</li>
-        <li role="presentation" id="current-money">0</li>
-        <li role="presentation"><button type="button" class="btn btn-success" id="start-button">START / RELOAD</button></li>
-        <li role="presentation" id="separators">|</li>
-        <li role="presentation">$</li>
-        <li role="presentation" id="betting-money">5</li>
-        <li>
-          <button type="button" class="btn btn-info btn-xs bet-group" id="plus-button">+</button>
-        </li>
-        <li>
-          <button type="button" class="btn btn-danger btn-xs bet-group" id="minus-button">-</button>
-        </li>
+        <div>
+          <li role="presentation" id="game-title">A&#9824; BLACKJACK &#9824;J</li>
+          <li role="presentation" id="separators">|</li>
+        </div>
+        <div>
         <li role="presentation">
-          <button type="button" class="btn btn-success bet-group" id="bet-button">BET / DEAL</button>
+          <span>$</span>
+          <span id="current-money">0</span>
+          <span>
+            <button type="button" class="btn btn-success" id="start-button">START / RELOAD</button>
+          </span>
+        </li>
+        <li role="presentation" id="separators">|</li>
+        <li role="presentation">
+            <span>$</span>
+            <span id="betting-money">5</span>
+            <span>
+              <button type="button" class="btn btn-info btn-xs bet-group" id="plus-button">+</button>
+            </span>
+            <span>
+              <button type="button" class="btn btn-danger btn-xs bet-group" id="minus-button">-</button>
+            </span>
+            <span>
+              <button type="button" class="btn btn-success bet-group" id="bet-button">BET / DEAL</button>
+          </div>
         </li>
       </ul>
     </div>
