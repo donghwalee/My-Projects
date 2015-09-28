@@ -29,6 +29,12 @@
 
 ##Approach + how the game was coded
 
+##Simplified game flow:
+- Cards are initially dealt (check point for black jacks, check to see if there are any aces: aces are handled by player and dealer's scores having 2 potential values each in an array - ace counting as 1 and 11).
+- If no blackjacks, then player goes (hit, stay, double down).
+- If player does not bust, then dealer goes according to the logic (hitting on 16 or under / staying on 17 or over, unless dealer busts).
+- Functions that take care of money.
+
 ###Global Variables:
 - **cards:** default deck of cards (ace is set to 1 point here).
 - **default money, bet, and betTemp** (created to deal with double down function).
